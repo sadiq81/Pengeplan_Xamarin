@@ -1,0 +1,51 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pengeplan.iOS/AppDelegate.cs">
+    <Files>
+      <File FileName="Pengeplan.Core/Testing/TestJerseyApi.cs" Line="23" Column="37" />
+      <File FileName="Pengeplan.Core/Domain/Transaction.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Core/Domain/TransactionType.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Core/Domain/BaseEntity.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Core/Domain/AuthResponse.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Core/Database/Database.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Core/Services/PengeplanApi.cs" Line="24" Column="1" />
+      <File FileName="Pengeplan.Core/Database/DataManager.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Core/Database/SQLite.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.iOS/Pengeplan_iOSViewController.designer.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.iOS/Pengeplan_iOSViewController.cs" Line="19" Column="37" />
+      <File FileName="Pengeplan.iOS/AppDelegate.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Pengeplan.Core" selected="True" />
+          <Node name="Pengeplan.iOS" expanded="True">
+            <Node name="References" expanded="True" />
+            <Node name="Pengeplan_iOSViewController.cs" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True">
+          <Node name="Pengeplan.Core" expanded="True">
+            <Node name="Pengeplan" expanded="True">
+              <Node name="Core" expanded="True">
+                <Node name="NUnitTestClass" expanded="True" />
+                <Node name="TestJerseyApi" expanded="True">
+                  <Node name="TestGetItems" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/tommysadiqhinrichsen/Projects/Pengeplan.Core/Pengeplan.Core/SAL/PengeplanApi.cs" line="123" column="1" />
+      <Breakpoint file="/Users/tommysadiqhinrichsen/Projects/Pengeplan.Core/Pengeplan.Core/SAL/PengeplanApi.cs" line="127" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

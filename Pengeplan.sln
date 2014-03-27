@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pengeplan.Core", "Pengeplan.Core\Pengeplan.Core.csproj", "{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Ad-Hoc|iPhone.ActiveCfg = Debug|x86
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Ad-Hoc|iPhone.Build.0 = Debug|x86
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.AppStore|iPhone.ActiveCfg = Debug|x86
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.AppStore|iPhone.Build.0 = Debug|x86
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Debug|iPhone.ActiveCfg = Debug|x86
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Debug|iPhone.Build.0 = Debug|x86
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Debug|iPhoneSimulator.Build.0 = Debug|x86
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Debug|x86.ActiveCfg = Debug|x86
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Debug|x86.Build.0 = Debug|x86
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Release|iPhone.ActiveCfg = Release|x86
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Release|iPhone.Build.0 = Release|x86
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Release|iPhoneSimulator.ActiveCfg = Release|x86
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Release|iPhoneSimulator.Build.0 = Release|x86
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Release|x86.ActiveCfg = Release|x86
+		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Pengeplan.Core\Pengeplan.Core.csproj
+	EndGlobalSection
+EndGlobal

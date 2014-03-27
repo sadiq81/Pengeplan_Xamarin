@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pengeplan.Core", "Pengeplan.Core\Pengeplan.Core.csproj", "{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pengeplan.iOS", "Pengeplan.iOS\Pengeplan.iOS.csproj", "{3F096851-51B1-4CB7-B161-125CB55289A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -15,6 +17,22 @@ Global
 		AppStore|iPhone = AppStore|iPhone
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.Debug|iPhone.Build.0 = Debug|iPhone
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.Debug|x86.ActiveCfg = Debug|iPhoneSimulator
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.Debug|x86.Build.0 = Debug|iPhoneSimulator
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.Release|iPhone.ActiveCfg = Release|iPhone
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.Release|iPhone.Build.0 = Release|iPhone
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.Release|x86.ActiveCfg = Release|iPhoneSimulator
+		{3F096851-51B1-4CB7-B161-125CB55289A5}.Release|x86.Build.0 = Release|iPhoneSimulator
 		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Ad-Hoc|iPhone.ActiveCfg = Debug|x86
 		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Ad-Hoc|iPhone.Build.0 = Debug|x86
 		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.AppStore|iPhone.ActiveCfg = Debug|x86

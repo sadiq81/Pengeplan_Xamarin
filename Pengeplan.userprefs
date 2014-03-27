@@ -1,6 +1,6 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pengeplan.iOS/AppDelegate.cs">
+﻿<Properties GitUserInfo="UsingMD">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pengeplan.iOS/View/CustomUIViewController.cs">
     <Files>
       <File FileName="Pengeplan.Core/Testing/TestJerseyApi.cs" Line="23" Column="37" />
       <File FileName="Pengeplan.Core/Domain/Transaction.cs" Line="1" Column="1" />
@@ -8,38 +8,15 @@
       <File FileName="Pengeplan.Core/Domain/BaseEntity.cs" Line="1" Column="1" />
       <File FileName="Pengeplan.Core/Domain/AuthResponse.cs" Line="1" Column="1" />
       <File FileName="Pengeplan.Core/Database/Database.cs" Line="1" Column="1" />
-      <File FileName="Pengeplan.Core/Services/PengeplanApi.cs" Line="24" Column="1" />
+      <File FileName="Pengeplan.Core/Services/PengeplanApi.cs" Line="1" Column="1" />
       <File FileName="Pengeplan.Core/Database/DataManager.cs" Line="1" Column="1" />
       <File FileName="Pengeplan.Core/Database/SQLite.cs" Line="1" Column="1" />
-      <File FileName="Pengeplan.iOS/Pengeplan_iOSViewController.designer.cs" Line="1" Column="1" />
-      <File FileName="Pengeplan.iOS/Pengeplan_iOSViewController.cs" Line="19" Column="37" />
-      <File FileName="Pengeplan.iOS/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.iOS/Main.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.iOS/Pengeplan.iOSViewController.designer.cs" Line="22" Column="40" />
+      <File FileName="Pengeplan.iOS/Pengeplan.iOSViewController.cs" Line="10" Column="1" />
+      <File FileName="Pengeplan.iOS/View/CustomUIViewController.cs" Line="83" Column="43" />
+      <File FileName="Pengeplan.iOS/View/CustomUIViewController.designer.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Pengeplan.Core" selected="True" />
-          <Node name="Pengeplan.iOS" expanded="True">
-            <Node name="References" expanded="True" />
-            <Node name="Pengeplan_iOSViewController.cs" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True">
-          <Node name="Pengeplan.Core" expanded="True">
-            <Node name="Pengeplan" expanded="True">
-              <Node name="Core" expanded="True">
-                <Node name="NUnitTestClass" expanded="True" />
-                <Node name="TestJerseyApi" expanded="True">
-                  <Node name="TestGetItems" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>

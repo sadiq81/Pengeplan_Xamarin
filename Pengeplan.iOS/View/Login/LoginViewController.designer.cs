@@ -9,8 +9,8 @@ using System.CodeDom.Compiler;
 
 namespace Pengeplan.iOS
 {
-	[Register ("Pengeplan_iOSViewController")]
-	partial class Pengeplan_iOSViewController
+	[Register ("LoginViewController")]
+	partial class LoginViewController
 	{
 		[Outlet]
 		MonoTouch.UIKit.UITextField passwordTextField { get; set; }

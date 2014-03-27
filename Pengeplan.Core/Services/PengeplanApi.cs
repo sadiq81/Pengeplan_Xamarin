@@ -2,9 +2,10 @@ using System;
 using System.IO;
 using System.Net;
 using System.Text;
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
+using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 namespace Pengeplan.Core
 {
@@ -18,7 +19,7 @@ namespace Pengeplan.Core
 			me = new PengeplanApi ();
 		}
 
-		public static AuthResponse authenticate (String userName, String userPassword)
+		public async static Task<AuthResponse> authenticate (String userName, String userPassword)
 		{
 			AuthResponse authresponse = new AuthResponse ();
 
@@ -32,6 +33,7 @@ namespace Pengeplan.Core
 				if (response.StatusCode == HttpStatusCode.OK) {
 					using (StreamReader reader = new StreamReader (response.GetResponseStream ())) {
 						var content = reader.ReadToEnd ();
+
 						authresponse = JsonConvert.DeserializeObject<AuthResponse> (content);
 					}
 				} 

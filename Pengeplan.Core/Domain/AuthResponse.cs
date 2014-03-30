@@ -12,6 +12,10 @@ namespace Pengeplan.Core
 	{
 		public AuthResponse ()
 		{
+			authorized = false;
+			username = "";
+			password = "";
+			pin = "";
 		}
 
 		public bool authorized { get; set; }
@@ -21,6 +25,8 @@ namespace Pengeplan.Core
 		public string password { get; set; }
 
 		public string pin { get; set; }
+
+		public Exception ex { get; set; }
 	}
 }
 

@@ -37,6 +37,7 @@
     <Folder Include="Services\" />
     <Folder Include="Database\" />
     <Folder Include="Domain\" />
+    <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Testing\TestJerseyApi.cs" />
@@ -49,6 +50,10 @@
     <Compile Include="Domain\BaseEntity.cs" />
     <Compile Include="Domain\Transaction.cs" />
     <Compile Include="Domain\TransactionType.cs" />
+    <Compile Include="Services\LoginService.cs" />
+    <Compile Include="Services\ServiceContainer.cs" />
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -56,6 +61,12 @@
     <Reference Include="System.Web.Extensions" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Auth.Android">
+      <HintPath>..\Components\xamarin.auth-1.2.2\lib\android\Xamarin.Auth.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Auth.iOS">
+      <HintPath>..\Components\xamarin.auth-1.2.2\lib\ios\Xamarin.Auth.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

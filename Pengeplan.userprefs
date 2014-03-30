@@ -1,15 +1,15 @@
 ﻿<Properties GitUserInfo="UsingMD">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pengeplan.Droid/MainActivity.cs">
-    <Files>
-      <File FileName="Pengeplan.iOS/View/Login/LoginViewController.cs" Line="57" Column="40" />
-      <File FileName="Pengeplan.iOS/View/Login/LoginViewController.designer.cs" Line="12" Column="33" />
-      <File FileName="Pengeplan.iOS/View/CustomUIViewController.cs" Line="67" Column="12" />
-      <File FileName="Pengeplan.Core/Services/PengeplanApi.cs" Line="1" Column="1" />
-      <File FileName="Pengeplan.iOS/View/Overview/OverViewController.cs" Line="10" Column="28" />
-      <File FileName="Pengeplan.iOS/View/Overview/OverViewController.designer.cs" Line="1" Column="1" />
-      <File FileName="Pengeplan.Droid/MainActivity.cs" Line="14" Column="17" />
-    </Files>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Pengeplan.Core" expanded="True">
+            <Node name="Views" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
@@ -18,5 +18,5 @@
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Pengeplan.Droid />
+  <MonoDevelop.Ide.ItemProperties.Pengeplan.Droid AndroidDeviceId-Debug="192.168.56.104:5555" MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
 </Properties>

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using Pengeplan.Core;
+using Xamarin.Auth;
 
 namespace Pengeplan.iOS
 {
@@ -16,6 +18,13 @@ namespace Pengeplan.iOS
 		public override UIWindow Window {
 			get;
 			set;
+		}
+
+		public override void FinishedLaunching (UIApplication application)
+		{
+			ServiceContainer.Register<AccountStore> (() => AccountStore.Create ());
+			ServiceContainer.Register<LoginService> (() => new LoginService ());
+			ServiceContainer.Register<PengeplanApi> (() => new PengeplanApi ());
 		}
 		// This method is invoked when the application is about to move from active to inactive state.
 		// OpenGL applications should use this method to pause.

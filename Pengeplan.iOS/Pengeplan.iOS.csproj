@@ -98,6 +98,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\portable-net40+sl5+wp80+win8+monotouch+monoandroid\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Auth.iOS">
+      <HintPath>..\Components\xamarin.auth-1.2.2\lib\ios\Xamarin.Auth.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -143,6 +146,12 @@
     <Compile Include="..\Pengeplan.Core\Services\PengeplanApi.cs">
       <Link>Core\Services\PengeplanApi.cs</Link>
     </Compile>
+    <Compile Include="..\Pengeplan.Core\Services\LoginService.cs">
+      <Link>Core\Services\LoginService.cs</Link>
+    </Compile>
+    <Compile Include="..\Pengeplan.Core\Services\ServiceContainer.cs">
+      <Link>Core\Services\ServiceContainer.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -157,5 +166,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="xamarin.auth">
+      <Version>1.2.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
   </ItemGroup>
 </Project>

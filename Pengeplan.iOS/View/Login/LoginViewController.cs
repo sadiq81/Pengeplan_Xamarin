@@ -9,9 +9,6 @@ namespace Pengeplan.iOS
 {
 	public partial class LoginViewController : CustomUIViewController
 	{
-		string pin;
-		LoadingOverlay loadingOverlay;
-
 		public LoginViewController (IntPtr handle) : base (handle)
 		{
 		}
@@ -29,6 +26,8 @@ namespace Pengeplan.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+
+		
 			// Perform any additional setup after loading the view, typically from a nib.
 
 		}
@@ -57,10 +56,11 @@ namespace Pengeplan.iOS
 
 		async partial void login (NSObject sender)
 		{
-			loadingOverlay = new LoadingOverlay (UIScreen.MainScreen.Bounds);
-			View.Add (loadingOverlay);
-			AuthResponse authresponse = await PengeplanApi.authenticate (this.usernameTextField.Text, this.passwordTextField.Text);
-			loadingOverlay.Hide ();
+
+			if (true) {
+				this.PerformSegue ("loginSeque", this);
+			}
+
 		}
 
 		partial void remember (NSObject sender)

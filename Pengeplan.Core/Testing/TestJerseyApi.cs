@@ -7,12 +7,12 @@ namespace Pengeplan.Core
 	public class TestJerseyApi
 	{
 		[Test ()]
-		public void TestAuthenticate ()
+		public async void  TestAuthenticate ()
 		{
 			String userName = "tommy1";
 			String userPassword = "1q2w3e4R";
-
-			Assert.AreEqual (true, PengeplanApi.authenticate (userName, userPassword).authorized);
+			AuthResponse response = await PengeplanApi.authenticate (userName, userPassword);
+			Assert.AreEqual (true, response.authorized);
 
 		}
 

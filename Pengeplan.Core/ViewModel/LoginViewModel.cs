@@ -1,10 +1,22 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Xamarin.Auth;
 
 namespace Pengeplan.Core
 {
 	public class LoginViewModel : BaseViewModel
 	{
+		public LoginViewModel ()
+		{
+			Account account = loginService.userExists ();
+			if (account != null) {
+				this.Username = account.Username;
+				this.Password = account.Properties [LoginService.PASSWORD];
+				this.Pin = account.Properties [LoginService.PIN];
+				this.Remember = true;
+			}
+		}
+
 		public string Username { get; set; }
 
 		public string Password { get; set; }
@@ -30,19 +42,15 @@ namespace Pengeplan.Core
 					loginService.StoreCredentials (response);
 			} finally {
 				IsBusy = false;
-				return response.authorized;
 			}
-		}
-
-		public void DeleteCredentials ()
-		{
-			loginService.DeleteCredentials ();
+			return response.authorized;
 		}
 
 		public void ClearFields ()
 		{
 			Username = Password = Pin = "";
 			Remember = false;
+			loginService.DeleteCredentials ();
 		}
 	}
 }

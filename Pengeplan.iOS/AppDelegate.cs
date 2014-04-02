@@ -25,6 +25,10 @@ namespace Pengeplan.iOS
 			ServiceContainer.Register<AccountStore> (() => AccountStore.Create ());
 			ServiceContainer.Register<LoginService> (() => new LoginService ());
 			ServiceContainer.Register<PengeplanApi> (() => new PengeplanApi ());
+			ServiceContainer.Register<DataManager> (() => new DataManager ());
+			ServiceContainer.Register<LoginViewModel> (() => new LoginViewModel ());
+
+
 		}
 		// This method is invoked when the application is about to move from active to inactive state.
 		// OpenGL applications should use this method to pause.

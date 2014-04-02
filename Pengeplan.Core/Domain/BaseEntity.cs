@@ -5,6 +5,8 @@ namespace Pengeplan.Core
 	public interface BaseEntity
 	{
 		long id { get; set; }
+
+		string getTableName ();
 	}
 }
 

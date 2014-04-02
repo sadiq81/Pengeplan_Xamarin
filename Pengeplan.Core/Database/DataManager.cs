@@ -1,43 +1,50 @@
 using System;
 using System.Collections.Generic;
+using System.Collections;
+using SQLite;
 
 namespace Pengeplan.Core
 {
-	public static class DataManager
+	public class DataManager
 	{
-		public static IEnumerable<Transaction> GetTransactions ()
+		SQLiteConnection conn;
+
+		public DataManager ()
 		{
-			return Database.GetItems<Transaction> ();
+
+			string folder = Environment.GetFolderPath (Environment.SpecialFolder.Personal);
+			conn = new SQLiteConnection (System.IO.Path.Combine (folder, "pengeplan.db"));
+			conn.CreateTable<Transaction> ();
 		}
 
-		public static Transaction GetTransaction (long id)
+		public  IEnumerable<Transaction> GetTransactions ()
 		{
-			return Database.GetItem<Transaction> (id);
+			return conn.Table<Transaction> ();
 		}
 
-		public static long SaveTransaction (Transaction item)
+		public  Transaction GetTransaction (long id)
 		{
-			return Database.SaveItem<Transaction> (item);
+			return conn.Table<Transaction> ().Where (t => t.id.Equals (id)).First ();
 		}
 
-		public static void SaveTransactions (IEnumerable<Transaction> items)
+		public  long SaveTransaction (Transaction item)
 		{
-			Database.SaveItems<Transaction> (items);
+			return conn.Insert (item);
 		}
 
-		public static int DeleteTransaction (long id)
+		public  void SaveTransactions (IEnumerable<Transaction> items)
 		{
-			return Database.DeleteItem<Transaction> (id);
+			conn.InsertAll (items);
 		}
 
-		public static void DeleteTransactions ()
+		public  int DeleteTransaction (long id)
 		{
-			Database.ClearTable<Transaction> ();
+			return conn.Delete (id);
 		}
 
-		public static int CountTransaction ()
+		public  void DeleteTransactions ()
 		{
-			return Database.CountTable<Transaction> ();
+			conn.DeleteAll<Transaction> ();
 		}
 	}
 }

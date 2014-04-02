@@ -8,10 +8,10 @@ namespace Pengeplan.Core
 	public class LoginService
 	{
 		protected readonly AccountStore accountStore = ServiceContainer.Resolve<AccountStore> ();
-		public readonly string CREDENTIALS_SERVICE = "pengeplanCredentials";
-		public readonly string PASSWORD = "password";
-		public readonly string PIN = "pin";
-		public readonly int PIN_MIN_LENGTH = 4;
+		public static readonly string CREDENTIALS_SERVICE = "pengeplanCredentials";
+		public static readonly string PASSWORD = "password";
+		public static readonly string PIN = "pin";
+		public static readonly int PIN_MIN_LENGTH = 4;
 
 		public void StoreCredentials (AuthResponse authResponse)
 		{
@@ -36,7 +36,12 @@ namespace Pengeplan.Core
 		public Account userExists ()
 		{
 			IEnumerable<Account> accounts = accountStore.FindAccountsForService (CREDENTIALS_SERVICE);
-			return accounts.FirstOrDefault ();
+			Account account = accounts.FirstOrDefault ();
+			if (account != null && account.Properties.ContainsKey (PIN)) {
+				return account;
+			} else {
+				return null;
+			}
 		}
 	}
 }

@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Pengeplan Xamarin</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.your-company.Pengeplan.iOS</string>
+	<string>dk.eazyit.pengeplan.xamarin.Pengeplan.iOS</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

@@ -5,11 +5,12 @@
 // Manual changes to this file may not be handled correctly.
 //
 using MonoTouch.Foundation;
+using MonoTouch.UIKit;
 
 namespace Pengeplan.iOS
 {
-	[Register ("CustomUIViewController")]
-	partial class CustomUIViewController
+	[Register ("KeyboardSupportedUIViewController")]
+	partial class KeyboardSupportedUIViewController: UIViewController
 	{
 		void ReleaseDesignerOutlets ()
 		{

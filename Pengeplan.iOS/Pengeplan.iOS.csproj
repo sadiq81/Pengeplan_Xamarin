@@ -101,6 +101,9 @@
     <Reference Include="Xamarin.Auth.iOS">
       <HintPath>..\Components\xamarin.auth-1.2.2\lib\ios\Xamarin.Auth.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="SQLite">
+      <HintPath>..\Components\sqlite-net-1.0.1\lib\ios\SQLite.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -109,27 +112,8 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="View\Login\LoginViewController.cs" />
-    <Compile Include="View\Login\LoginViewController.designer.cs">
-      <DependentUpon>LoginViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Overview\OverViewController.cs" />
-    <Compile Include="View\Overview\OverViewController.designer.cs">
-      <DependentUpon>OverViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Custom\CustomUIViewController.cs" />
-    <Compile Include="View\Custom\CustomUIViewController.designer.cs">
-      <DependentUpon>CustomUIViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Custom\LoadingOverlay.cs" />
     <Compile Include="..\Pengeplan.Core\Database\DataManager.cs">
       <Link>Core\Database\DataManager.cs</Link>
-    </Compile>
-    <Compile Include="..\Pengeplan.Core\Database\Database.cs">
-      <Link>Core\Database\Database.cs</Link>
-    </Compile>
-    <Compile Include="..\Pengeplan.Core\Database\SQLite.cs">
-      <Link>Core\Database\SQLite.cs</Link>
     </Compile>
     <Compile Include="..\Pengeplan.Core\Domain\AuthResponse.cs">
       <Link>Core\Domain\AuthResponse.cs</Link>
@@ -152,6 +136,24 @@
     <Compile Include="..\Pengeplan.Core\Services\ServiceContainer.cs">
       <Link>Core\Services\ServiceContainer.cs</Link>
     </Compile>
+    <Compile Include="View\Custom\KeyboardSupportedUIViewController.cs" />
+    <Compile Include="View\Custom\KeyboardSupportedUIViewController.designer.cs">
+      <DependentUpon>KeyboardSupportedUIViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\LoginController.cs" />
+    <Compile Include="View\Login\LoginController.designer.cs">
+      <DependentUpon>LoginController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Pengeplan.Core\ViewModel\BaseViewModel.cs">
+      <Link>Core\ViewModel\BaseViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Pengeplan.Core\ViewModel\LoginViewModel.cs">
+      <Link>Core\ViewModel\LoginViewModel.cs</Link>
+    </Compile>
+    <Compile Include="View\Overview\OverViewController.cs" />
+    <Compile Include="View\Overview\OverViewController.designer.cs">
+      <DependentUpon>OverViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -160,6 +162,7 @@
     <Folder Include="View\Overview\" />
     <Folder Include="View\Custom\" />
     <Folder Include="Core\" />
+    <Folder Include="Core\ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="View\MainStoryboard.storyboard" />
@@ -170,6 +173,11 @@
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.auth">
       <Version>1.2.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="sqlite-net">
+      <InstallationInProgress>True</InstallationInProgress>
+      <Version>1.0.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

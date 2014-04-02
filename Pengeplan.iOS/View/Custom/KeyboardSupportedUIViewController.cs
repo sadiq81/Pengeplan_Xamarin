@@ -5,7 +5,7 @@ using MonoTouch.UIKit;
 
 namespace Pengeplan.iOS
 {
-	public partial class CustomUIViewController : UIViewController
+	public partial class KeyboardSupportedUIViewController : UIViewController
 	{
 		private float animatedDistance;
 		const float KEYBOARD_ANIMATION_DURATION = 0.3f;
@@ -14,11 +14,11 @@ namespace Pengeplan.iOS
 		const float PORTRAIT_KEYBOARD_HEIGHT = 216f;
 		const float LANDSCAPE_KEYBOARD_HEIGHT = 162f;
 
-		public CustomUIViewController () : base ("CustomUIViewController", null)
+		public KeyboardSupportedUIViewController () : base ("KeyboardSupportedUIViewController", null)
 		{
 		}
 
-		public CustomUIViewController (IntPtr handle) : base (handle)
+		public KeyboardSupportedUIViewController (IntPtr handle) : base (handle)
 		{
 		}
 

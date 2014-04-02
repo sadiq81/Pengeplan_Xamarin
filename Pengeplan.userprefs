@@ -1,15 +1,15 @@
 ﻿<Properties GitUserInfo="UsingMD">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Pengeplan.Core" expanded="True">
-            <Node name="Views" selected="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pengeplan.Core/ViewModel/SecuritiesViewModel.cs">
+    <Files>
+      <File FileName="Pengeplan.iOS/View/Login/LoginController.cs" Line="30" Column="53" />
+      <File FileName="Pengeplan.iOS/View/Overview/OverViewController.cs" Line="19" Column="44" />
+      <File FileName="Pengeplan.Core/Database/SQLite.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Core/Database/Database.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Core/Database/DataManager.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Core/ViewModel/SecuritiesViewModel.cs" Line="6" Column="3" />
+      <File FileName="Pengeplan.Core/ViewModel/LoginViewModel.cs" Line="11" Column="42" />
+    </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
@@ -18,5 +18,8 @@
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Pengeplan.iOS>
+    <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="R49NYV2375" TeamId="2Z296RX4K9" />
+  </MonoDevelop.Ide.ItemProperties.Pengeplan.iOS>
   <MonoDevelop.Ide.ItemProperties.Pengeplan.Droid AndroidDeviceId-Debug="192.168.56.104:5555" MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
 </Properties>

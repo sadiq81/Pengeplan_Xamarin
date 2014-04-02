@@ -15,7 +15,7 @@ namespace Pengeplan.Core
 		{
 		}
 
-		public  Task<AuthResponse> authenticate (string userName, string userPassword, string pin)
+		public async Task<AuthResponse> authenticate (string userName, string userPassword, string pin)
 		{
 			AuthResponse authresponse = new AuthResponse ();
 
@@ -44,7 +44,7 @@ namespace Pengeplan.Core
 			return authresponse;
 		}
 
-		public  Task<List<Transaction>> getItems (String userName, String userPassword)
+		public async Task<List<Transaction>> getItems (String userName, String userPassword)
 		{
 			List<Transaction> transactions = null;
 

@@ -3,18 +3,118 @@
 using System;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using Pengeplan.Core;
+using System.Drawing;
 
 namespace Pengeplan.iOS
 {
-	public partial class OverViewController : UIViewController
+	public partial class OverViewController : UIViewController, IUITableViewDataSource, IUITableViewDelegate
 	{
+		static ITableViewViewModel viewModel;
+		static SecuritiesViewModel securitiesViewModel = ServiceContainer.Resolve<SecuritiesViewModel> ();
+		static DepositoriesViewModel depositoriesViewModel = ServiceContainer.Resolve<DepositoriesViewModel> ();
+		static HistoryViewModel historyViewModel = ServiceContainer.Resolve<HistoryViewModel> ();
+		static UpdateTransactonsViewModel updateModel = ServiceContainer.Resolve<UpdateTransactonsViewModel> ();
+		UITableViewController tableViewController = new UITableViewController ();
+		UIRefreshControl refreshControl = new UIRefreshControl ();
+
 		public OverViewController (IntPtr handle) : base (handle)
 		{
+			viewModel = securitiesViewModel;
 		}
-	}
 
-	class SecuritiesTableSource : UITableViewSource
-	{
-		const string CellName = "SecuritiesCell";
+		public override void ViewDidLoad ()
+		{
+			base.ViewDidLoad ();
+			this.NavigationItem.HidesBackButton = true;
+
+			this.SegmentedController.ValueChanged += (sender, e) => {
+				switch (SegmentedController.SelectedSegment) {
+				case 0:
+					{
+						viewModel = securitiesViewModel;
+						this.SecuritiesTableView.ReloadData ();
+						break;
+					}
+				case 1:
+					{
+						viewModel = depositoriesViewModel;
+						this.SecuritiesTableView.ReloadData ();
+						break;
+					}
+				case 2:
+					{
+						viewModel = historyViewModel;
+						this.SecuritiesTableView.ReloadData ();
+						break;
+					}
+				}
+			};
+
+			tableViewController.TableView = SecuritiesTableView;
+			tableViewController.RefreshControl = refreshControl;
+			refreshControl.ValueChanged += async (sender, e) => {
+				refreshControl.BeginRefreshing ();
+				await updateModel.UpdateTransactions ();
+				this.SecuritiesTableView.ReloadData ();
+				refreshControl.EndRefreshing ();
+			};
+
+			this.SecuritiesTableView.WeakDataSource = this;
+			this.SecuritiesTableView.WeakDelegate = this;
+			this.SecuritiesTableView.TableFooterView = new UIView (RectangleF.Empty);
+		}
+
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
+
+		}
+
+		public virtual int RowsInSection (UITableView tableView, int section)
+		{
+			return viewModel.NumberOfItems ();
+		}
+
+		public virtual UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
+		{
+			string cellIdentifier = "TableCell";
+
+			UITableViewCell cell = tableView.DequeueReusableCell (cellIdentifier);
+			// if there are no cells to reuse, create a new one
+			if (cell == null) {
+				cell = new UITableViewCell (UITableViewCellStyle.Value1, cellIdentifier);
+			}
+			cell.TextLabel.Text = viewModel.LeftCellContent (indexPath.Row);
+			cell.DetailTextLabel.Text = viewModel.RightCellContent (indexPath.Row);
+			cell.SelectionStyle = UITableViewCellSelectionStyle.None;
+			return cell;
+		}
+
+		[Export ("tableView:didSelectRowAtIndexPath:")]
+		public void RowSelected (UITableView tableView, NSIndexPath indexPath)
+		{
+			if (typeof(HistoryViewModel).Equals (viewModel.GetType ())) {
+				this.PerformSegue ("historySeque", this);
+			}
+
+		}
+
+		public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
+		{
+			base.PrepareForSegue (segue, sender);
+
+			if (segue.Identifier.Equals ("historySeque")) {
+				var tableController = segue.DestinationViewController as TransactionTableViewController;
+				if (tableController != null) {
+					var source = SecuritiesTableView.WeakDataSource as IUITableViewDataSource;
+					var rowPath = SecuritiesTableView.IndexPathForSelectedRow;
+					var item = source.GetCell (SecuritiesTableView, rowPath);
+					string paperName = item.TextLabel.Text;
+					tableController.NavigationItem.Title = paperName;
+					tableController.viewModel.paperName = paperName;
+				}
+			}
+		}
 	}
 }

@@ -93,7 +93,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
     <Reference Include="monotouch" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\portable-net40+sl5+wp80+win8+monotouch+monoandroid\Newtonsoft.Json.dll</HintPath>
@@ -154,6 +153,28 @@
     <Compile Include="View\Overview\OverViewController.designer.cs">
       <DependentUpon>OverViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="..\Pengeplan.Core\ViewModel\SecuritiesViewModel.cs">
+      <Link>Core\ViewModel\SecuritiesViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Pengeplan.Core\ViewModel\DepositoriesViewModel.cs">
+      <Link>Core\ViewModel\DepositoriesViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Pengeplan.Core\ViewModel\HistoryViewModel.cs">
+      <Link>Core\ViewModel\HistoryViewModel.cs</Link>
+    </Compile>
+    <Compile Include="View\Transaction\TransactionTableViewController.cs" />
+    <Compile Include="View\Transaction\TransactionTableViewController.designer.cs">
+      <DependentUpon>TransactionTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Pengeplan.Core\ViewModel\ITableViewViewModel.cs">
+      <Link>Core\ViewModel\ITableViewViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Pengeplan.Core\ViewModel\TransactionsViewModel.cs">
+      <Link>Core\ViewModel\TransactionsViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Pengeplan.Core\ViewModel\UpdateTransactonsViewModel.cs">
+      <Link>Core\ViewModel\UpdateTransactonsViewModel.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -163,6 +184,7 @@
     <Folder Include="View\Custom\" />
     <Folder Include="Core\" />
     <Folder Include="Core\ViewModel\" />
+    <Folder Include="View\Transaction\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="View\MainStoryboard.storyboard" />

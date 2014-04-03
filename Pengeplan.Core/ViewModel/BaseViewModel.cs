@@ -7,6 +7,7 @@ namespace Pengeplan.Core
 	{
 		protected readonly PengeplanApi pengeplanApi = ServiceContainer.Resolve < PengeplanApi> ();
 		protected readonly LoginService loginService = ServiceContainer.Resolve < LoginService> ();
+		protected readonly DataManager manager = ServiceContainer.Resolve<DataManager> ();
 
 		public event EventHandler IsBusyChanged = delegate { };
 

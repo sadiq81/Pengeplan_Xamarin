@@ -12,9 +12,23 @@ namespace Pengeplan.iOS
 	[Register ("OverViewController")]
 	partial class OverViewController
 	{
-		
+		[Outlet]
+		MonoTouch.UIKit.UITableView SecuritiesTableView { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UISegmentedControl SegmentedController { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (SecuritiesTableView != null) {
+				SecuritiesTableView.Dispose ();
+				SecuritiesTableView = null;
+			}
+
+			if (SegmentedController != null) {
+				SegmentedController.Dispose ();
+				SegmentedController = null;
+			}
 		}
 	}
 }

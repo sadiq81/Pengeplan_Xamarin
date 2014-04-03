@@ -69,6 +69,6 @@ Global
 		{CAE1E0C5-F272-4C97-929B-48DB403AFF7D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Pengeplan.Core\Pengeplan.Core.csproj
+		StartupItem = Pengeplan.iOS\Pengeplan.iOS.csproj
 	EndGlobalSection
 EndGlobal

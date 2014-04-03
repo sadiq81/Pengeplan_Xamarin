@@ -6,7 +6,7 @@ namespace Pengeplan.Core
 	{
 		long id { get; set; }
 
-		string getTableName ();
+		bool Equals (object obj);
 	}
 }
 

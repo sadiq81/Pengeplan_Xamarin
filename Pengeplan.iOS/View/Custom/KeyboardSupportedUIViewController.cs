@@ -5,7 +5,7 @@ using MonoTouch.UIKit;
 
 namespace Pengeplan.iOS
 {
-	public partial class KeyboardSupportedUIViewController : UIViewController
+	public partial class KeyboardSupportedUIViewController : UIViewController, IUITextFieldDelegate
 	{
 		private float animatedDistance;
 		const float KEYBOARD_ANIMATION_DURATION = 0.3f;
@@ -43,7 +43,7 @@ namespace Pengeplan.iOS
 		}
 
 		[MonoTouch.Foundation.Export ("textFieldDidBeginEditing:")]
-		public virtual void EditingStarted (UITextField textField)
+		public  void EditingStarted (UITextField textField)
 		{
 
 
@@ -78,7 +78,7 @@ namespace Pengeplan.iOS
 		}
 
 		[MonoTouch.Foundation.Export ("textFieldDidEndEditing:")]
-		public virtual void EditingEnded (UITextField textField)
+		public  void EditingEnded (UITextField textField)
 		{
 			RectangleF viewFrame = this.View.Frame;
 			viewFrame.Y += animatedDistance;
@@ -90,7 +90,7 @@ namespace Pengeplan.iOS
 		}
 
 		[MonoTouch.Foundation.Export ("textFieldShouldReturn:")]
-		public virtual bool ShouldReturn (UITextField textField)
+		public  bool ShouldReturn (UITextField textField)
 		{
 			textField.ResignFirstResponder ();
 			return true;

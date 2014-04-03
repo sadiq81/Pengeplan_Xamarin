@@ -53,7 +53,11 @@
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\SecuritiesViewModel.cs" />
-    <Compile Include="Testing\SQLite.cs" />
+    <Compile Include="ViewModel\DepositoriesViewModel.cs" />
+    <Compile Include="ViewModel\HistoryViewModel.cs" />
+    <Compile Include="ViewModel\TransactionsViewModel.cs" />
+    <Compile Include="ViewModel\ITableViewViewModel.cs" />
+    <Compile Include="ViewModel\UpdateTransactonsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -64,6 +68,9 @@
     </Reference>
     <Reference Include="Xamarin.Auth.iOS">
       <HintPath>..\Components\xamarin.auth-1.2.2\lib\ios\Xamarin.Auth.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite">
+      <HintPath>..\Components\sqlite-net-1.0.1\lib\ios\SQLite.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

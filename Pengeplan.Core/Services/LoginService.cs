@@ -33,6 +33,18 @@ namespace Pengeplan.Core
 			}
 		}
 
+		public AuthResponse UserInfo ()
+		{
+			IEnumerable<Account> accounts = accountStore.FindAccountsForService (CREDENTIALS_SERVICE);
+			Account account = accounts.FirstOrDefault ();
+			string username = account.Username;
+			string password = account.Properties [LoginService.PASSWORD];
+			AuthResponse response = new AuthResponse ();
+			response.username = username;
+			response.password = password;
+			return response;
+		}
+
 		public Account userExists ()
 		{
 			IEnumerable<Account> accounts = accountStore.FindAccountsForService (CREDENTIALS_SERVICE);

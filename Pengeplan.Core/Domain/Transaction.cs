@@ -7,6 +7,23 @@ namespace Pengeplan.Core
 	{
 		public Transaction ()
 		{
+	
+		}
+
+		public Transaction (long id, TransactionType transactionType, DateTime date, string paperName, string stockExchange, string currency, decimal numberOfItems, decimal valuation, decimal amount, string legalEntity, string ownedAccount, decimal localAmount)
+		{
+			this.id = id;
+			this.transactionType = transactionType;
+			this.date = date;
+			this.paperName = paperName;
+			this.stockExchange = stockExchange;
+			this.currency = currency;
+			this.numberOfItems = numberOfItems;
+			this.valuation = valuation;
+			this.amount = amount;
+			this.legalEntity = legalEntity;
+			this.ownedAccount = ownedAccount;
+			this.localAmount = localAmount;
 		}
 
 		[PrimaryKey]

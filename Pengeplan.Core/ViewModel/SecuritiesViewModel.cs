@@ -36,15 +36,6 @@ namespace Pengeplan.Core
 			return rigth;
 		}
 
-		public List<string[]> DataForPieChart ()
-		{
-			List<string[]> data = new List<string[]> ();
-			for (int i = 0; i < NumberOfItems (); i++) {
-				data.Add (new string[]{ LeftCellContent (i), manager.SecuritiesAmount (i) });
-			}
-			return data;
-		}
-
 		public  String LeftCellContent (int cell)
 		{
 			string left;
@@ -56,6 +47,28 @@ namespace Pengeplan.Core
 				IsBusy = false;
 			}
 			return left;
+		}
+
+		public List<PieChartValue> DataForPieChart ()
+		{
+			List<PieChartValue> data = new List<PieChartValue> ();
+			for (int i = 0; i < NumberOfItems (); i++) {
+				data.Add (new PieChartValue (manager.SecuritiesPaperName (i), manager.SecuritiesAmountLocal (i)));
+			}
+			return data;
+		}
+
+		public class PieChartValue
+		{
+			public PieChartValue (string paperName, decimal amount)
+			{
+				this.paperName = paperName;
+				this.amount = amount;
+			}
+
+			public string paperName { get; set; }
+
+			public decimal amount { get; set; }
 		}
 	}
 }

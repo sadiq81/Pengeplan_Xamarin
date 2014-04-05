@@ -3,22 +3,19 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Threading.Tasks;
 using SQLite;
-using Mono.Data.Sqlite;
 
 namespace Pengeplan.Core
 {
 	public class DataManager
 	{
 		SQLiteConnection sync;
-		SQLiteAsyncConnection async;
-		//		SqliteConnection conn2;
+
 		public DataManager ()
 		{
 
 			string folder = Environment.GetFolderPath (Environment.SpecialFolder.Personal);
 
 			sync = new SQLiteConnection (System.IO.Path.Combine (folder, "pengeplan.db"));
-			async = new SQLiteAsyncConnection (System.IO.Path.Combine (folder, "pengeplan.db"));
 
 			sync.CreateTable<Transaction> ();
 			sync.DeleteAll<Transaction> ();
@@ -45,6 +42,16 @@ namespace Pengeplan.Core
 			                 " ORDER BY paperName ASC" +
 			                 " LIMIT 1 OFFSET " + cell);
 			return amount.ToString ();
+		}
+
+		public decimal SecuritiesAmountLocal (int cell)
+		{
+			decimal amount = sync.ExecuteScalar<decimal> ("SELECT SUM(localAmount) as AMOUNT" +
+			                 " FROM 'Transaction'" +
+			                 " GROUP BY paperName" +
+			                 " ORDER BY paperName ASC" +
+			                 " LIMIT 1 OFFSET " + cell);
+			return amount;
 		}
 
 		public string SecuritiesCurrency (int cell)
@@ -168,25 +175,24 @@ namespace Pengeplan.Core
 			                         " LIMIT 1 OFFSET ?", paperName, cell);
 			return list [0].transactionType.ToString ();
 		}
-
+		//   ---------------- Generic methods ---------------- //
 		public  Transaction GetTransaction (long id)
 		{
 			return sync.Table<Transaction> ().Where (t => t.id.Equals (id)).First ();
 		}
-		//   ---------------- Generic methods ---------------- //
+
 		public  long SaveTransaction (Transaction item)
 		{
-			return sync.Insert (item);
+			return sync.InsertOrReplace (item);
 		}
 
-		public  void SaveTransactions (IEnumerable<Transaction> items)
+		public async Task<int> SaveTransactions (IEnumerable<Transaction> items)
 		{
-			sync.InsertAll (items);
-		}
-
-		public async Task<int> AsyncSaveTransactions (IEnumerable<Transaction> items)
-		{
-			return await async.InsertAllAsync (items);
+			int count = 0;
+			foreach (Transaction transaction in items) {
+				count += sync.InsertOrReplace (transaction);
+			}
+			return count;
 		}
 
 		public  int DeleteTransaction (long id)

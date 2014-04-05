@@ -18,7 +18,7 @@ namespace Pengeplan.Core
 			try {
 				AuthResponse response = loginService.UserInfo ();
 				List<Transaction> transactions = await pengeplanApi.getItems (response.username, response.password);
-				result = await manager.AsyncSaveTransactions (transactions);
+				result = await manager.SaveTransactions (transactions);
 			} finally {
 				IsBusy = false;
 			}

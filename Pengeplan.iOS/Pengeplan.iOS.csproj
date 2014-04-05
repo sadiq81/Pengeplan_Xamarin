@@ -175,6 +175,9 @@
     <Compile Include="..\Pengeplan.Core\ViewModel\UpdateTransactonsViewModel.cs">
       <Link>Core\ViewModel\UpdateTransactonsViewModel.cs</Link>
     </Compile>
+    <Compile Include="AppDelegate.designer.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -198,7 +201,6 @@
       <Visible>False</Visible>
     </XamarinComponentReference>
     <XamarinComponentReference Include="sqlite-net">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>1.0.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>

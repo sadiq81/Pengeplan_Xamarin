@@ -1,22 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="Pengeplan.Droid">
-	<uses-sdk />
-	<application android:label="Pengeplan Xamarin">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="dk.eazyit.pengeplan.xamarin.android">
+	<uses-sdk android:minSdkVersion="15" />
+	<application android:label="Pengeplan Xamarin" android:icon="@drawable/icon">
 	</application>
 	<uses-permission android:name="android.permission.INTERNET" />
-
 	<activity android:name=".activity.Splash">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-		
-
-        <activity android:name=".activity.Login"
-                  android:label="@string/login">
-        </activity>
-		<!--
+		<intent-filter>
+			<action android:name="android.intent.action.MAIN" />
+			<category android:name="android.intent.category.LAUNCHER" />
+		</intent-filter>
+	</activity>
+	<activity android:name=".activity.Login" android:label="@string/login">
+	</activity>
+	<!--
         <activity android:name=".activity.Overview"
                   android:label="@string/overview">
         </activity>
@@ -24,5 +20,4 @@
         <activity android:name=".activity.Transactions">
         </activity>
         -->
-
 </manifest>

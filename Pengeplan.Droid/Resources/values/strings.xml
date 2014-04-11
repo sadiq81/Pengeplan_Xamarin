@@ -10,4 +10,7 @@
     <string name="securities">Securities</string>
     <string name="depositories">Depositories</string>
     <string name="history">History</string>
+
+    <string name="ErrorTitle">Error</string>
+    <string name="Loading">Loading</string>
 </resources>

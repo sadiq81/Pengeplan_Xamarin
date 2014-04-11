@@ -41,7 +41,7 @@ namespace Pengeplan.Droid
 
 			public void OnAnimationEnd (Animation animation)
 			{
-				var intent = new Intent (context, typeof(Login));
+				var intent = new Intent (context, typeof(LoginActivity));
 				context.StartActivity (intent);
 				context.Finish ();
 			}

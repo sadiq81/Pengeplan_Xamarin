@@ -19,6 +19,10 @@ namespace Pengeplan.Core
 
 			sync.CreateTable<Transaction> ();
 			sync.DeleteAll<Transaction> ();
+
+			SaveTransaction (new Transaction (1, Pengeplan.Core.TransactionType.BUY, new DateTime (2014, 1, 1), "Paper1", "NYSE", "DKK", 1, 1, 100, "legal-1", "account1-1", 100));
+			SaveTransaction (new Transaction (2, Pengeplan.Core.TransactionType.BUY, new DateTime (2014, 1, 2), "Paper2", "NYSE", "USD", 1, 1, 100, "legal-1", "account2-2", 550));
+			SaveTransaction (new Transaction (3, Pengeplan.Core.TransactionType.BUY, new DateTime (2014, 1, 3), "Paper1", "NYSE", "DKK", 1, 1, 100, "legal-1", "account1-1", 100));
 		}
 
 		public  IEnumerable<Transaction> GetTransactions ()

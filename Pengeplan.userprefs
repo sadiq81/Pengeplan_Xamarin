@@ -1,48 +1,16 @@
 ﻿<Properties GitUserInfo="UsingMD">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pengeplan.iOS/View/Overview/OverViewController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pengeplan.Core/ViewModel/DepositoriesViewModel.cs">
     <Files>
-      <File FileName="Pengeplan.iOS/AppDelegate.cs" Line="25" Column="59" />
-      <File FileName="Pengeplan.iOS/View/Overview/OverViewController.cs" Line="4" Column="1" />
-      <File FileName="../../../../Developer/MonoTouch/Source/mono/mcs/class/corlib/System.Runtime.CompilerServices/AsyncVoidMethodBuilder.cs" Line="1" Column="1" />
-      <File FileName="Pengeplan.Core/ViewModel/UpdateTransactonsViewModel.cs" Line="1" Column="1" />
-      <File FileName="Pengeplan.Core/Services/LoginService.cs" Line="1" Column="1" />
-      <File FileName="Pengeplan.Core/Domain/AuthResponse.cs" Line="1" Column="1" />
-      <File FileName="Pengeplan.Core/Database/DataManager.cs" Line="56" Column="17" />
-      <File FileName="Pengeplan.Core/ViewModel/DepositoriesViewModel.cs" Line="17" Column="42" />
-      <File FileName="Pengeplan.Core/ViewModel/SecuritiesViewModel.cs" Line="56" Column="87" />
+      <File FileName="Pengeplan.Droid/Activity/OverViewActivity.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Droid/Adapter/ListViewAdapter.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Core/ViewModel/TransactionsViewModel.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Droid/Activity/TransactionsActivity.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Core/Database/DataManager.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Core/packages.config" Line="1" Column="1" />
+      <File FileName="Pengeplan.Core/ViewModel/BaseViewModel.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Core/ViewModel/DepositoriesViewModel.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Pengeplan.Core" expanded="True">
-            <Node name="References" expanded="True" />
-            <Node name="Database" expanded="True" />
-            <Node name="Domain" expanded="True" />
-            <Node name="Services" expanded="True" />
-            <Node name="Testing" expanded="True" />
-            <Node name="ViewModel" expanded="True" />
-          </Node>
-          <Node name="Pengeplan.iOS" expanded="True">
-            <Node name="References" expanded="True" />
-            <Node name="ComponentReferenceFolder" expanded="True" />
-            <Node name="Core" expanded="True">
-              <Node name="Database" expanded="True" />
-              <Node name="Domain" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="ViewModel" expanded="True" />
-            </Node>
-            <Node name="View" expanded="True">
-              <Node name="Login" expanded="True" />
-              <Node name="Overview" expanded="True">
-                <Node name="OverViewController.cs" selected="True" />
-              </Node>
-              <Node name="Transaction" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
@@ -53,8 +21,8 @@
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Pengeplan.Droid AndroidDeviceId-Debug="192.168.56.104:5555" MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
   <MonoDevelop.Ide.ItemProperties.Pengeplan.iOS>
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="R49NYV2375" TeamId="2Z296RX4K9" />
   </MonoDevelop.Ide.ItemProperties.Pengeplan.iOS>
+  <MonoDevelop.Ide.ItemProperties.Pengeplan.Droid AndroidDeviceId-Debug="192.168.56.101:5555" MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
 </Properties>

@@ -84,15 +84,17 @@ namespace Pengeplan.iOS
 		public virtual UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
 		{
 			string cellIdentifier = "TableCell";
-
 			UITableViewCell cell = tableView.DequeueReusableCell (cellIdentifier);
 			// if there are no cells to reuse, create a new one
 			if (cell == null) {
 				cell = new UITableViewCell (UITableViewCellStyle.Value1, cellIdentifier);
+				cell.SelectionStyle = UITableViewCellSelectionStyle.None;
 			}
+
+
 			cell.TextLabel.Text = viewModel.LeftCellContent (indexPath.Row);
 			cell.DetailTextLabel.Text = viewModel.RightCellContent (indexPath.Row);
-			cell.SelectionStyle = UITableViewCellSelectionStyle.None;
+
 			return cell;
 		}
 

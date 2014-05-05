@@ -12,7 +12,7 @@ using Android.Views.Animations;
 
 namespace Pengeplan.Droid
 {
-	[Activity (Label = "Splash", MainLauncher = true)]			
+	[Activity (MainLauncher = true)]			
 	public class Splash : Activity
 	{
 		protected override void OnCreate (Bundle bundle)

@@ -2,7 +2,9 @@
 <resources>
 	<string name="app_name">Pengeplan Xamarin</string>
     <string name="username">Username</string>
+    <string name="d_username">tommy25</string>
     <string name="password">Password</string>
+    <string name="d_password">sahri35</string>
     <string name="remember">Remember login?</string>
     <string name="pin">Pin</string>
     <string name="login">Login</string>

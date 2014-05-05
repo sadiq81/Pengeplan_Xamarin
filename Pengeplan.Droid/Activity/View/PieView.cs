@@ -28,8 +28,6 @@ namespace Pengeplan.Droid
 		{
 			base.Draw (canvas);
 
-
-
 			Paint mBgPaints = new Paint ();
 			mBgPaints.AntiAlias = true;
 			mBgPaints.SetStyle (Paint.Style.Fill);
@@ -45,6 +43,10 @@ namespace Pengeplan.Droid
 			decimal total = 0;
 			foreach (SecuritiesViewModel.PieChartValue value in securitiesViewModel.DataForPieChart ()) {
 				total += value.amount;
+			}
+
+			if (total == 0) {
+				return;
 			}
 
 			decimal degressPerAmount = 360 / total;

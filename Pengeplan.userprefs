@@ -1,15 +1,17 @@
 ﻿<Properties GitUserInfo="UsingMD">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pengeplan.Core/ViewModel/DepositoriesViewModel.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Ad-Hoc|iPhone" />
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Pengeplan.Droid/Activity/OverViewActivity.cs" Line="1" Column="1" />
-      <File FileName="Pengeplan.Droid/Adapter/ListViewAdapter.cs" Line="1" Column="1" />
-      <File FileName="Pengeplan.Core/ViewModel/TransactionsViewModel.cs" Line="1" Column="1" />
-      <File FileName="Pengeplan.Droid/Activity/TransactionsActivity.cs" Line="1" Column="1" />
-      <File FileName="Pengeplan.Core/Database/DataManager.cs" Line="1" Column="1" />
-      <File FileName="Pengeplan.Core/packages.config" Line="1" Column="1" />
-      <File FileName="Pengeplan.Core/ViewModel/BaseViewModel.cs" Line="1" Column="1" />
-      <File FileName="Pengeplan.Core/ViewModel/DepositoriesViewModel.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Droid/Adapter/ListViewAdapter.cs" Line="24" Column="1" />
+      <File FileName="Pengeplan.Droid/Activity/LoginActivity.cs" Line="30" Column="59" />
+      <File FileName="Pengeplan.Droid/Custom/BaseActivity.cs" Line="18" Column="3" />
+      <File FileName="Pengeplan.Core/ViewModel/LoginViewModel.cs" Line="30" Column="1" />
+      <File FileName="Pengeplan.Droid/Properties/AndroidManifest.xml" Line="7" Column="42" />
+      <File FileName="Pengeplan.Droid/Custom/Application.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Droid/Activity/Splash.cs" Line="11" Column="32" />
+      <File FileName="Pengeplan.Droid/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="Pengeplan.Droid/Resources/values/colors.xml" Line="1" Column="1" />
+      <File FileName="Pengeplan.Droid/Resources/values/strings.xml" Line="7" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -21,8 +23,8 @@
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Pengeplan.Droid AndroidDeviceId-Debug="5B2E000200000001" MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" MonoForAntroid.PreferredTheme="Theme.DeviceDefault" />
   <MonoDevelop.Ide.ItemProperties.Pengeplan.iOS>
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="R49NYV2375" TeamId="2Z296RX4K9" />
   </MonoDevelop.Ide.ItemProperties.Pengeplan.iOS>
-  <MonoDevelop.Ide.ItemProperties.Pengeplan.Droid AndroidDeviceId-Debug="192.168.56.101:5555" MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
 </Properties>
